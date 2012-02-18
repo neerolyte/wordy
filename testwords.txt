@@ -1,6 +1,0 @@
-apple
-ball
-bat
-ben
-fox
-zoo
