@@ -16,6 +16,6 @@
     "url": "git://github.com/neerolyte/repoproxy.git"
   },
   "scripts": {
-    "test": "node_modules/nodeunit/bin/nodeunit tests"
+    "test": "node_modules/nodeunit/bin/nodeunit --reporter verbose tests"
   }
 }

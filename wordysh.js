@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 var wordy = require('./lib/wordy');
 var fs = require('fs');
+var repl = require('repl');
 
 var args = process.argv.slice(2);
 
@@ -13,7 +14,4 @@ while (words[words.length-1] == '') {
 
 wordy.setWords(words);
 
-for (var a in args) {
-	console.log('Contains: ' + wordy.contains(args[a]));
-	console.log('Anagrams: ' + wordy.anagrams(args[a]));
-}
+repl.start('wordy> ').context.wordy = wordy;

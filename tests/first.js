@@ -18,16 +18,19 @@ module.exports = testCase({
 	testContains: function(test) {
 		test.deepEqual(
 			this.wordy.contains('tab').sort(),
-			['bat', 'tab']
+			['bat', 'tab'],
+			'tab'
 		);
 		test.deepEqual(
 			this.wordy.contains('lab'),
-			['ball']
+			['ball'],
+			'lab'
 		);
 		// sorted because a multiple result may not be returned in order
 		test.deepEqual(
 			this.wordy.contains('a').sort(),
-			['ball', 'bar', 'bat', 'tab']
+			['ball', 'bar', 'bat', 'tab'],
+			'a'
 		);
 		test.done();
 	},
@@ -38,11 +41,20 @@ module.exports = testCase({
 	testAnagrams: function(test) {
 		test.deepEqual(
 			this.wordy.anagrams('abt').sort(),
-			['bat', 'tab']
+			['bat', 'tab'],
+			'abt'
 		);
 		test.deepEqual(
 			this.wordy.anagrams('ab'),
-			[]
+			[],
+			'ab'
+		);
+		
+		this.wordy.setWords(['all', 'ball', 'pinball']);
+		test.deepEqual(
+			this.wordy.anagrams('abll'),
+			['ball'],
+			'abll'
 		);
 		test.done();
 	},
@@ -54,21 +66,25 @@ module.exports = testCase({
 		// one blank
 		test.deepEqual(
 			this.wordy.anagrams('ab', 1).sort(),
-			['bar', 'bat', 'tab']
+			['bar', 'bat', 'tab'],
+			'ab + 1 blank'
 		);
 		// two blanks
 		test.deepEqual(
 			this.wordy.anagrams('ab', 2).sort(),
-			['ball', 'bar', 'bat', 'tab']
+			['ball'],
+			'ab + 2 blanks'
 		);
 		// only blanks
 		test.deepEqual(
 			this.wordy.anagrams('', 3).sort(),
-			['bar', 'bat', 'tab']
+			['bar', 'bat', 'tab'],
+			'words from 3 blanks only'
 		);
 		test.deepEqual(
 			this.wordy.anagrams('', 4).sort(),
-			['ball', 'bar', 'bat', 'tab']
+			['ball'],
+			'words from 4 blanks only'
 		);
 		test.done();
 	},
