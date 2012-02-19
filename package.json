@@ -1,0 +1,21 @@
+{
+  "name": "wordy",
+  "description": "Match words for board games efficiently",
+  "version": "0.0.0",
+  "dependencies": {
+    "nodeunit": "0.6.x"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "0.6.x"
+  },
+  "author": "David Schoen <dave@lyte.id.au> (http://lyte.id.au/)",
+  "homepage": "https://github.com/neerolyte/wordy",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/neerolyte/repoproxy.git"
+  },
+  "scripts": {
+    "test": "node_modules/nodeunit/bin/nodeunit tests"
+  }
+}
