@@ -46,4 +46,21 @@ module.exports = testCase({
 		);
 		test.done();
 	},
+	
+	/**
+	 * Test the ability to find words which are anagrams of the supplied word + optional blanks
+	 */
+	testAnagramBlanks: function(test) {
+		// one blank
+		test.deepEqual(
+			this.wordy.anagrams('ab', 1).sort(),
+			['bar', 'bat', 'tab']
+		);
+		// two blanks
+		test.deepEqual(
+			this.wordy.anagrams('ab', 2).sort(),
+			['ball', 'bar', 'bat', 'tab']
+		);
+		test.done();
+	},
 });
