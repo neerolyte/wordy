@@ -61,6 +61,15 @@ module.exports = testCase({
 			this.wordy.anagrams('ab', 2).sort(),
 			['ball', 'bar', 'bat', 'tab']
 		);
+		// only blanks
+		test.deepEqual(
+			this.wordy.anagrams('', 3).sort(),
+			['bar', 'bat', 'tab']
+		);
+		test.deepEqual(
+			this.wordy.anagrams('', 4).sort(),
+			['ball', 'bar', 'bat', 'tab']
+		);
 		test.done();
 	},
 });
