@@ -65,24 +65,24 @@ module.exports = testCase({
 	testAnagramBlanks: function(test) {
 		// one blank
 		test.deepEqual(
-			this.wordy.anagrams('ab', 1).sort(),
+			this.wordy.anagrams('ab?').sort(),
 			['bar', 'bat', 'tab'],
 			'ab + 1 blank'
 		);
 		// two blanks
 		test.deepEqual(
-			this.wordy.anagrams('ab', 2).sort(),
+			this.wordy.anagrams('ab??').sort(),
 			['ball'],
 			'ab + 2 blanks'
 		);
 		// only blanks
 		test.deepEqual(
-			this.wordy.anagrams('', 3).sort(),
+			this.wordy.anagrams('???').sort(),
 			['bar', 'bat', 'tab'],
 			'words from 3 blanks only'
 		);
 		test.deepEqual(
-			this.wordy.anagrams('', 4).sort(),
+			this.wordy.anagrams('????').sort(),
 			['ball'],
 			'words from 4 blanks only'
 		);
