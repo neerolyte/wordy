@@ -16,3 +16,5 @@ wordy.setWords(words);
 
 var r = repl.start('wordy> ');
 r.context.wordy = wordy;
+
+r.context.anagrams = wordy.anagrams;

@@ -53,7 +53,7 @@ module.exports = testCase({
 		this.wordy.setWords(['all', 'ball', 'pinball']);
 		test.deepEqual(
 			this.wordy.anagrams('abll'),
-			['ball'],
+			['all', 'ball'],
 			'abll'
 		);
 		test.done();
@@ -72,7 +72,7 @@ module.exports = testCase({
 		// two blanks
 		test.deepEqual(
 			this.wordy.anagrams('ab??').sort(),
-			['ball'],
+			['ball', 'bar', 'bat', 'tab'],
 			'ab + 2 blanks'
 		);
 		// only blanks
@@ -83,7 +83,7 @@ module.exports = testCase({
 		);
 		test.deepEqual(
 			this.wordy.anagrams('????').sort(),
-			['ball'],
+			['ball', 'bar', 'bat', 'tab'],
 			'words from 4 blanks only'
 		);
 		test.done();
