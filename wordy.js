@@ -4,7 +4,7 @@ var fs = require('fs');
 
 var args = process.argv.slice(2);
 
-var words = fs.readFileSync('lists/enable2k.txt', 'ascii').split('\n');
+var words = fs.readFileSync(__dirname+'/lists/enable2k.txt', 'ascii').split('\n');
 
 // clean up trailing empty elements
 while (words[words.length-1] == '') 
