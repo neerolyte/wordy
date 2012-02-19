@@ -14,4 +14,5 @@ while (words[words.length-1] == '') {
 
 wordy.setWords(words);
 
-repl.start('wordy> ').context.wordy = wordy;
+var r = repl.start('wordy> ');
+r.context.wordy = wordy;
