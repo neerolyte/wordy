@@ -55,6 +55,7 @@ module.exports = testCase({
 			['ball', 'bar', 'bat', 'tab'],
 			'ab + 2 blanks'
 		);
+		
 		// only blanks
 		test.deepEqual(
 			this.wordy.anagrams('???').sort(),
