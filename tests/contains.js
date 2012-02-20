@@ -1,3 +1,4 @@
+
 /**
  * First set of functionality tests for wordy
  */
@@ -5,8 +6,9 @@ var testCase = require('nodeunit').testCase;
 
 module.exports = testCase({
 	setUp: function(callback) {
-		var wordy = this.wordy = require('..');
-		wordy.setWords(['bar', 'bat', 'ball', 'tab']);
+		var wordy = this.wordy = require('..').create([
+			'bar', 'bat', 'ball', 'tab'
+		]);
 		callback();
 	},
 	tearDown: function(callback) {

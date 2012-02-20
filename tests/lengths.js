@@ -5,8 +5,9 @@ var testCase = require('nodeunit').testCase;
 
 module.exports = testCase({
 	setUp: function(callback) {
-		var wordy = this.wordy = require('..');
-		wordy.setWords(['a', 'at', 'all', 'ball']);
+		var wordy = this.wordy = require('..').create([
+			'a', 'at', 'all', 'ball'
+		]);
 		callback();
 	},
 	tearDown: function(callback) {
