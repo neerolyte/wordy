@@ -28,4 +28,20 @@ module.exports = testCase({
 		);
 		test.done();
 	},
+	
+	testAnagrams: function(test) {
+		test.ok(
+			this.wordy.anagrams('aa') instanceof require('..').Wordy,
+			'Return from anagrams'
+		);
+		test.done();
+	},
+	
+	testContains: function(test) {
+		test.ok(
+			this.wordy.contains('aa') instanceof require('..').Wordy,
+			'Return from contains'
+		);
+		test.done();
+	},
 });

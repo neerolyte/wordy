@@ -22,7 +22,7 @@ module.exports = testCase({
 			'tab'
 		);
 		test.deepEqual(
-			this.wordy.contains('lab'),
+			this.wordy.contains('lab').sort(),
 			['ball'],
 			'lab'
 		);
@@ -45,14 +45,14 @@ module.exports = testCase({
 			'abt'
 		);
 		test.deepEqual(
-			this.wordy.anagrams('ab'),
+			this.wordy.anagrams('ab').sort(),
 			[],
 			'ab'
 		);
 		
 		this.wordy.setWords(['all', 'ball', 'pinball']);
 		test.deepEqual(
-			this.wordy.anagrams('abll'),
+			this.wordy.anagrams('abll').sort(),
 			['all', 'ball'],
 			'abll'
 		);
