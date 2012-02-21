@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-var wordy = require('./lib/wordy');
 var fs = require('fs');
 var repl = require('repl');
 
@@ -12,9 +11,8 @@ while (words[words.length-1] == '') {
 	words.pop();
 }
 
-wordy.setWords(words);
+
+var wordy = require('./lib/wordy').create(words);
 
 var r = repl.start('wordy> ');
 r.context.wordy = wordy;
-
-r.context.anagrams = wordy.anagrams;
