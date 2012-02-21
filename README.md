@@ -49,8 +49,8 @@ Blank (or unknown) letters can be represented with question marks "?", e.g.:
 
 The contains(letters) filter will return only words in the word list that contain all of the provided letters:
 
-   wordy> wordy.contains('xzlch').words
-   [ 'chlordiazepoxide', 'chlordiazepoxides' ]
+	wordy> wordy.contains('xzlch').words
+	[ 'chlordiazepoxide', 'chlordiazepoxides' ]
 
 ## Lengths
 
