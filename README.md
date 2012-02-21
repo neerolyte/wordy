@@ -18,10 +18,10 @@ Once you've done that you can do things like ask for anagrams of a word:
       wordy> wordy.anagrams('bat').words
       [ 'ab',
         'at',
-	'ba',
-	'bat',
-	'ta',
-	'tab' ]
+		'ba',
+		'bat',
+		'ta',
+		'tab' ]
 
 Queries are stackable:
 
@@ -41,9 +41,9 @@ Blank (or unknown) letters can be represented with question marks "?", e.g.:
       wordy> wordy.anagrams('x?').words
       [ 'ax',
         'ex',
-	'ox',
-	'xi',	
-	'xu' ]
+		'ox',
+		'xi',	
+		'xu' ]
 
 ## Contains
 
@@ -65,14 +65,14 @@ E.g.:
 
 The pattern(re) filter will return words in the word list matching the supplied Regular Expression:
 
-   wordy> wordy.pattern(/^..z$/).words
-   [ 'adz',
-     'biz',
-     'coz',
-     'fez',
-     'fiz',
-     'lez',
-     'wiz' ]
+	wordy> wordy.pattern(/^..z$/).words
+	[ 'adz',
+	  'biz',
+	  'coz',
+	  'fez',
+	  'fiz',
+	  'lez',
+	  'wiz' ]
 
 # Dictionary
 
