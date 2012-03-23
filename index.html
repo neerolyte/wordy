@@ -5,11 +5,11 @@
     <script type="text/javascript" src="browser.js"></script>
   </head>
   <body>
-    <form class="filters" action="javascript: update();">
+    <form class="filters" action="javascript: update()">
       <ul>
 	<li class="filter">
-	  <input class="string" />
-	  <select class="type">
+	  <input class="string" onkeyup="update();" />
+	  <select class="type" onchange="update();">
 	    <option value="anagrams">Anagrams</option>
 	    <option value="contains">Contains</option>
 	    <option value="lengths">Lengths</option>
@@ -18,6 +18,7 @@
 	</li>
       </ul>
     </form>
-    <div id="result" />
+    <div>Count: <span id="resultcount" /></div>
+    <div>Results: <span id="result" /></div>
   </body>
 </html>
