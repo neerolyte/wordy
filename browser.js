@@ -8,3 +8,10 @@ listReq.done(function(data) {
 	}
 	w = wordy.create(words);
 });
+
+/**
+ * Update the display based on the current filters
+ */
+function update() {
+	$('#result').html(w.anagrams(filters.filter0.value).sort().join(','));
+}
