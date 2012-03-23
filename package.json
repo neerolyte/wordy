@@ -3,7 +3,8 @@
   "description": "Match words for board games efficiently",
   "version": "0.0.0",
   "dependencies": {
-    "nodeunit": "0.6.x"
+    "nodeunit": "0.6.x",
+	"jasmine-node": "1.0.x"
   },
   "devDependencies": {},
   "engines": {
