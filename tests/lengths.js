@@ -25,7 +25,7 @@ module.exports = testCase({
 		);
 		test.deepEqual(
 			this.wordy.lengths(2,2).sort(),
-			['all'],
+			['at'],
 			'Length 2"'
 		);
 		test.done();
@@ -34,7 +34,7 @@ module.exports = testCase({
 	/**
 	 * Test length ranges
 	 */
-	testLengthSingle: function(test) {
+	testLengthRange: function(test) {
 		test.deepEqual(
 			this.wordy.lengths(3,10).sort(),
 			['all', 'ball'],
