@@ -19,7 +19,13 @@ function update() {
 		var type = $(filter).find('.type')[0].value;
 
 		// bail if str is not set
-		if (str == '') break;
+		if (str == '') {
+			// if we're still on the first entry avoid rendering alltogether
+			if (i == 0)
+				return;
+			else
+				break;
+		}
 
 		res = res[type](str);
 	}
