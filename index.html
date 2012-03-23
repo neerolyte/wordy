@@ -1,7 +1,3 @@
-<!--
-    To avoid annoying security XHR context issues,
-    test locally with: $ python -m SimpleHTTPServer
--->
 <html>
   <head>
     <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
@@ -9,12 +5,19 @@
     <script type="text/javascript" src="browser.js"></script>
   </head>
   <body>
-    <form id="filters" action="javascript: update();">
-      <input id="filter0" type="text" />
+    <form class="filters" action="javascript: update();">
+      <ul>
+	<li class="filter">
+	  <input class="string" />
+	  <select class="type">
+	    <option value="anagrams">Anagrams</option>
+	    <option value="contains">Contains</option>
+	    <option value="lengths">Lengths</option>
+	    <option value="pattern">Pattern</option>
+	  </select>
+	</li>
+      </ul>
     </form>
-    <script type="text/javascript">
-      filters.filter0.focus();
-    </script>
     <div id="result" />
   </body>
 </html>
