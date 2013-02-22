@@ -1,5 +1,7 @@
 # About
 
+[![build-status](https://api.travis-ci.org/neerolyte/wordy.png)](https://travis-ci.org/neerolyte/wordy)
+
 Wordy is here to help you find that word you're after.
 
 Read on for examples...
